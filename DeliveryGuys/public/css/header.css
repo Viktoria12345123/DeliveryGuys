@@ -1,0 +1,99 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowraps;
+    align-items: center; 
+    justify-content: space-between;
+    background-color: rgb(255, 188, 43);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem; 
+    z-index: 1000;
+}
+
+
+header #nav-list {
+    justify-content: flex-end;
+    list-style: none;    
+    margin-left: auto;  
+    margin-right: 3rem;
+    padding: 0;
+    display: flex;         
+    gap: 1rem;            
+    align-items: center; 
+}
+
+header li {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    display: inline-block;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header a:hover {
+    background-color: white;
+    color: rgb(255, 188, 43);
+}
+
+.brand-name{ 
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    justify-content: space-between;
+    margin-right: 4rem;
+}
+
+.logo {
+    margin-right: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    scale: 1.2;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .brand-container {
+        gap: 0.3rem;
+    }
+    .brand-name {
+        font-size: 1.2rem;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+        scale: 1; /* remove scale on small */
+    }
+    #nav-list {
+        margin-right: 0;
+        gap: 0.5rem;
+        font-size: 14px;
+    }
+    header a {
+        padding: 0.25rem 0.75rem;
+        font-size: 14px;
+    }
+}
