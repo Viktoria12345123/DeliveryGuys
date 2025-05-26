@@ -1,4 +1,5 @@
 import '../public/css/styles.css'
+import Header from './Header.js';
 import Order from './Order.js';
 
 
@@ -6,7 +7,8 @@ function App() {
  
   return (
     <>
-      <Order></Order>
+    <Header></Header>
+    <Order></Order>
     </>
   )
 }
